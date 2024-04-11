@@ -9,7 +9,7 @@ import os
 
 def create_patches(im,name,save_path):
 
-    patches_img = patchify(im, (128, 128,3), step=128)  #Step=256 for 256 patches means no overlap
+    patches_img = patchify(im, (256, 256,3), step=256)  #Step=256 for 256 patches means no overlap
     head_path = save_path
 
     for i in range(patches_img.shape[0]):
@@ -24,7 +24,7 @@ def create_patches(im,name,save_path):
 
 def create_patches_mask(im,name,save_path):
 
-    patches_img = patchify(im, (256, 256), step=236)  #Step=256 for 256 patches means no overlap
+    patches_img = patchify(im, (256, 256), step=256)  #Step=256 for 256 patches means no overlap
     head_path = save_path
 
     for i in range(patches_img.shape[0]):
