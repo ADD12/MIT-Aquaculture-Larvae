@@ -45,11 +45,11 @@ def visualize_mask(mask_np):
     plt.show()
 
 def main():
-    mask_path = 'C:\\Users\\Unyim\\Downloads\\CSDownloads\\IAP_UROP_DATA\\Code\\binary_output'
-    im_path = 'C:\\Users\\Unyim\\Downloads\\CSDownloads\\IAP_UROP_DATA\\Code\\im_output'
+    mask_path = #add a path
+    im_path = #add a path
 
-    save_mask = 'C:\\Users\\Unyim\\Downloads\\CSDownloads\\IAP_UROP_DATA\\Code\\bi_patches'
-    save_img = 'C:\\Users\\Unyim\\Downloads\\CSDownloads\\IAP_UROP_DATA\Code\\im_patches'
+    save_mask = #add a path
+    save_img = #add a path
 
     for mask_file_path,im_file_path in zip(glob.glob(os.path.join(mask_path, '*.tif')), glob.glob(os.path.join(im_path, '*.tif'))):
 
