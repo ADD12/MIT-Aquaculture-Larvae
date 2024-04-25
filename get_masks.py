@@ -87,6 +87,7 @@ def create_mask(og_image_path,image_info, annotations, output_folder,im_output,c
     original = image_info['file_name']
     path_im = os.path.join(og_image_path,original)
     get_image = cv.imread(path_im, cv.IMREAD_COLOR)
+    get_image = cv.cvtColor(get_image, cv.COLOR_BGR2RGB)
     im_path = os.path.join(im_output, image_name)
     tifffile.imwrite(im_path, get_image)
 
