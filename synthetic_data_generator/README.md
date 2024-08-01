@@ -35,22 +35,7 @@ pip install -r requirements.txt
 
 4. Generated images and annotations will be saved in the `data/generated/` directory.
 
-## Usage
-
-For detailed usage examples, refer to the `examples.py` script. Here's a basic example using the cellular automaton placement strategy:
-
-```python
-from generate_data.place_cell import add_larvae_to_background
-
-add_larvae_to_background(
- "data/background/background.jpg",
- "data/background/_annotations.coco.json",
- "data/larvae",
- "data/generated/output",
- num_samples=5
-)
-
-Configuration
+## Configuration
 The project offers various configurable parameters for each placement strategy. For a comprehensive guide on these parameters, please refer to the configuration_guide.md file.
 
 ## Project Structure
@@ -89,16 +74,6 @@ By default, this will:
 3. Place larvae images from `data/larvae/`
 4. Generate 5 synthetic images in `data/generated/test_density/`
 5. Create visualizations for each generated image
-
-## Configuration
-
-Adjust the following parameters in `main.py` to customize the image generation:
-
-- `background_path`: Path to the background image
-- `background_anno_path`: Path to the background annotations file
-- `larvae_dir`: Directory containing larvae images
-- `output_dir`: Directory to save generated images
-- `num_samples`: Number of synthetic images to generate
 
 ## Key Components
 
