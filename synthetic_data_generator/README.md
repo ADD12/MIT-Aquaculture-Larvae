@@ -39,7 +39,7 @@ pip install -r requirements.txt
 The project offers various configurable parameters for each placement strategy. For a comprehensive guide on these parameters, please refer to the configuration_guide.md file.
 
 ## Project Structure
-
+```plaintext
 synthetic-larvae-generator/
 ├── data/
 │   ├── background/
@@ -63,7 +63,7 @@ synthetic-larvae-generator/
 ├── main.py
 ├── README.md
 └── requirements.txt
-
+```
 ## Usage
 
 To generate synthetic images, run the `main.py` script:
