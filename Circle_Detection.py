@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 import os
 # Author: Santiago Borrego
-
+# Contains functions for circle-related tasks used in other files
 
 def circle_detection(image_paths):
     """
@@ -67,6 +67,10 @@ def draw_circles(img,circles):
 
 
 def get_circle_avg(image,circle):
+    """
+    Given an image and a circle annotation 
+    Returns the 3 average color or 1 average grayscale value within that circle
+    """
     x, y, r = map(int, circle)
     # Create a mask for the circle
     mask = np.zeros(image.shape[:2], dtype="uint8")
