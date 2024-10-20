@@ -1,7 +1,10 @@
+# Author: Santiago Borrego
+# Code to connect with Roboflow API and retrieve JSON annotations
 from roboflow import Roboflow
 import json
 from shapely.geometry import Polygon
 
+# Loads data directly from Roboflow using API Key and project specifications
 def load_roboflow_data(api_key, workspace_name, project_name, version):
     rf = Roboflow(api_key=api_key)
     project = rf.workspace(workspace_name).project(project_name)
@@ -12,7 +15,8 @@ def open_dataset(annotations_path):
     with open(annotations_path, 'r') as f:
         coco_data = json.load(f)
     return coco_data
-
+    
+# Cleans raw annotations and casts coordinates of annotations as a Polygon type
 def clean_dataset(raw_dataset):
     clean = {'info': raw_dataset['info'], 'images':raw_dataset['images']}
     annotations = []
