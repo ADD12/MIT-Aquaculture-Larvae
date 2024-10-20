@@ -1,3 +1,5 @@
+# Code used to experiment different classifiers on final training dataset
+# Models were simply fit using a subset of the data and then saved to export
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
