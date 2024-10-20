@@ -41,7 +41,7 @@ def prep_data(image_paths,annotations):
     Takes in an image and the polygon_data dictionary
     Returns array of features and labels
     """
-    features = []  # To hold the HSV and RGB values
+    features = []  # To hold the HSV or RGB values
     labels = []  # To hold the corresponding labels
     for i,path in enumerate(image_paths):
         image = cv2.imread(path)
@@ -57,6 +57,10 @@ def prep_data(image_paths,annotations):
 
 
 def train_classifier(train_features, train_labels,test_features,test_labels):
+    """
+    Given training and testing features and labels 
+    Returns a classifier training on the data and prints confusion matrix and accuracy
+    """
     classes = np.unique(train_labels)
     class_weights = compute_class_weight(class_weight='balanced', classes=classes, y=train_labels)
     class_weights_dict = {classes[i]: class_weights[i] for i in range(len(classes))}
@@ -67,7 +71,8 @@ def train_classifier(train_features, train_labels,test_features,test_labels):
     #svc = svm.SVC(C=1, gamma='scale', kernel='rbf', probability=True, class_weight=class_weights_dict, verbose=True)
     #svc = svm.SVC(probability=True,class_weight = class_weights_dict,verbose=True)
     #classifier_svm = GridSearchCV(svc,param_grid,cv=3,verbose=True)
-    #kn = KNeighborsClassifier(n_neighbors=5)
+
+    
     rf_classifier = RandomForestClassifier(n_estimators=100, class_weight=class_weights_dict, random_state=42)
     rf_classifier.fit(train_features, train_labels)
     # # Make predictions on the test set
@@ -83,6 +88,10 @@ def train_classifier(train_features, train_labels,test_features,test_labels):
 
 
 def cross_validate(classifiers,features,labels,n_folds = 5):
+    """
+    Function to cross validate different classifiers on the same data and labels
+    Prints results by classifier
+    """
     cv_results = {}
 
     for name, clf in classifiers.items():
@@ -96,6 +105,10 @@ def cross_validate(classifiers,features,labels,n_folds = 5):
         print(f"{name}: Mean accuracy = {cv_results[name]['mean_score']:.4f} with std = {cv_results[name]['std_score']:.4f}")
 
 def create_classifier():
+    """
+    Main function which loads the training and validation datasets
+    Used to then train and return the classifier
+    """
     train_dataset = create_dataset('train')
     train_base_path = os.path.abspath(os.path.join('..', 'Aquaculture-Larvae-2', 'train'))
     train_image_paths = [os.path.join(train_base_path, image['file_name']) for image in train_dataset['images']]
