@@ -7,7 +7,9 @@ from sklearn.metrics import precision_score, recall_score, f1_score, accuracy_sc
 from HSV_RGB_Classifier import create_classifier
 from All_Robo_Data import create_dataset
 # Author: Santiago Borrego
-
+# File goes to process to test the performance of baseline model which includes
+# circle detection and then HSV/RGB classification 
+# Prints multiple metrics and displays images with results included
 
 def calculate_iou(circle,polygon):
     """
@@ -110,14 +112,17 @@ def analyze_matchings(matchings,image_paths,annotations):
     return true_positives,false_positives, false_negatives,healthy, dead, dead_matchings,healthy_matchings,true_labels,predicted_labels, images
 
 def main():
+    # Load training dataset and extract circles 
     train_dataset = create_dataset('train')
     base_path = os.path.abspath(os.path.join('..', 'Aquaculture-Larvae-2', 'train'))
     image_paths = [os.path.join(base_path, image['file_name']) for image in train_dataset['images']]
     circles = circle_detection(image_paths)
     annotations = train_dataset['annotations']
     matchings = get_matchings(circles, annotations)
+    # Retrieve all the measurements from analysis
     true_positives,false_positives, false_negatives,healthy, dead, dead_matchings,healthy_matchings,true_labels, predicted_labels, images = analyze_matchings(matchings, image_paths, annotations)
 
+    # Display images with outlines one by one
     for i, image in enumerate(images):
         window_name = f'Image {i+1}'
 
@@ -139,6 +144,7 @@ def main():
     print(f"Precision: {precision}, Recall: {recall}, F1 Score: {f1}, Accuracy: {accuracy}, Classifier Accuracy: {classifier_accuracy}" )
 
 if __name__ == '__main__':
+    # Create classifier using function imported from other file
     classifier = create_classifier()
     main()
     
