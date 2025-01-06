@@ -15,7 +15,7 @@ This project addresses the challenge of counting and classifying larvae in image
 
 Currently, a YOLO-based model is providing the best results for detecting larvae. However, classification performance is limited due to an imbalanced dataset, with dead larvae being significantly underrepresented.
 
-The **Spring-2024** directory includes the most recent work on this project. There is also a synthetic data generator that can generate synthetic data that is automatically labeled in COCO format. 
+The **Fall-2024** directory includes the most recent work on this project. There is also a synthetic data generator that can generate synthetic data that is automatically labeled in COCO format. 
 
 ---
 
