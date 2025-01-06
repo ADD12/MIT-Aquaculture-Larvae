@@ -20,7 +20,7 @@ The **Fall-2024** directory includes the most recent work on this project. There
 ---
 
 ## Features
-*To be filled in later.*
+The YOLO models counts and classifies shellfish larvae in a microscopic image, and the results are displayed on a website. 
 
 ---
 
