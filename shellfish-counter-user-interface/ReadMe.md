@@ -1,5 +1,8 @@
 # Setting up Local Backend Server
 
+Clone this repository
+On your computer, add folder "custom_v14 copy" from shared google drive to the backend folder (due to github size restraints)
+
 1. Navigate to the user interface repository.
 2. Set up and activate a virtual environment:
 ```bash
