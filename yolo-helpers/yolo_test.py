@@ -40,5 +40,5 @@ def process_images(input_folder, conf_threshold=0.25):
     cv2.destroyAllWindows()
 
 # Example usage
-input_folder = "/Users/beckettdevoe/Desktop/Larvae Main/sorted_images/10x"  # Adjust path as necessary
+input_folder = "/Path/to/input/images/folder"  # Adjust path as necessary
 process_images(input_folder, conf_threshold=0.01)
