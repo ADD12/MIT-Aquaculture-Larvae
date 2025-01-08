@@ -5,7 +5,7 @@ from ultralytics import YOLO
 import random
 
 # Load your trained YOLO model (replace with your trained model path)
-model = YOLO('/Users/beckettdevoe/Desktop/Larvae Main/custom_yolo_models/custom_v14/weights/best.pt')  # Path to your trained YOLO model
+model = YOLO('/Path/to/model/best.pt')  # Path to your trained YOLO model
 
 def process_images(input_folder, conf_threshold=0.25):
     # Use glob to get all jpg/jpeg images
