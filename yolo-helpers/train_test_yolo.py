@@ -3,11 +3,11 @@ import os
 from ultralytics import YOLO
 
 # Define paths (Adjust these paths to match your environment)
-dataset_yaml_path = '/Users/beckettdevoe/Desktop/Larvae Main/Datasets/Dataset 2 10x V2.v3i.yolov8/data.yaml'  # Path to your data.yaml file
+dataset_yaml_path = '/Path/to/data.yaml'  # Path to your data.yaml file
 pretrained_model = "yolov8n.pt"  # You can choose other model sizes like yolov8s.pt, yolov8m.pt, etc.
-train_results_folder = '/Users/beckettdevoe/Desktop/Larvae Main/yolo_specialties/training_results'  # Folder where training results will be saved
-dataset_images_path = '/Users/beckettdevoe/Desktop/Larvae Main/sorted_images/10x'  # Path to images folder for running inference after training
-prediction_output_folder = '/Users/beckettdevoe/Desktop/Larvae Main/yolo_specialties/prediction_output_folder'  # Folder where predictions will be saved
+train_results_folder = '/Folder for training/training_results'  # Folder where training results will be saved
+dataset_images_path = '/Path/to/images'  # Path to images folder for running inference after training
+prediction_output_folder = '/Path/to/prediction_output_folder'  # Folder where predictions will be saved
 
 # Load the pre-trained YOLOv8 model
 model = YOLO(pretrained_model)
@@ -25,7 +25,7 @@ def train_model(epochs=50, imgsz=640, batch_size=16):
         device='cpu',            # Use 'cpu' for CPU training (adjust as needed)
         verbose=True,             # Enable verbose mode to show detailed progress
         name="custom_v1",          # Experiment name
-        project="/Users/beckettdevoe/Desktop/Larvae Main/custom_yolo_models",  # Set the project path explicitly
+        project="/Project location/custom_yolo_models",  # Set the project path explicitly
     )
 
     print("Model training completed.")
