@@ -55,7 +55,7 @@ def process_images(input_folder, output_folder):
             print(f"Error processing {image_path}: {e}")
 
 # Example usage
-input_folder = "/Users/beckettdevoe/Desktop/Larvae Main/100CANON"
-output_folder = "/Users/beckettdevoe/Desktop/Larvae Main/square_images"
+input_folder = "/Input images folder path"
+output_folder = "/Output images folder path"
 
 process_images(input_folder, output_folder)
