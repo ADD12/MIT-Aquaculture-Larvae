@@ -1,0 +1,22 @@
+# Python dependencies
+numpy==1.21.2                # Numerical operations
+opencv-python==4.5.5.64      # Video and image processing
+Pillow==9.2.0                # Image manipulation (PIL)
+torch==1.10.0                # PyTorch for YOLO models
+ultralytics==8.0.20          # YOLO models
+flask==2.2.3                 # Lightweight web framework
+flask-cors==3.0.10           # Handling CORS in Flask
+requests==2.31.0             # HTTP requests
+werkzeug==2.2.3              # HTTP handling for Flask
+
+# React/Node.js dependencies (for reference or hybrid projects)
+axios==1.7.7                 # HTTP client similar to Axios in Node.js
+web-vitals==2.1.4            # Monitoring app performance (conceptual inclusion)
+
+# Testing tools and equivalents
+pytest==7.4.0                # Python testing framework (equivalent to jest)
+pytest-django==4.5.2         # If Django is used for backend
+
+# Additional dependencies (optional based on use)
+tqdm==4.62.3                 # Progress bar for Python scripts
+scipy==1.7.1                 # Advanced computations if needed
