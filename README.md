@@ -29,12 +29,6 @@ The YOLO models counts and classifies shellfish larvae in a microscopic image, a
     ```bash
     git clone https://github.com/rvincent99/MIT-Aquaculture-Larvae.git
     ```
-
-2. Install dependencies:
-    ```bash
-    pip install -r Fall-2024/requirements.txt
-    ```
-
 ---
 
 ## Future Work
