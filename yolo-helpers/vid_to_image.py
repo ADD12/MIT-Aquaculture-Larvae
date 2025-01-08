@@ -120,10 +120,10 @@ def stitch_video_to_image(video_path, mask, output_image_path, max_frames=3):
         print("Error: Could not stitch images. Stitcher status code:", status)
 
 # Usage
-video_path = "/Users/beckettdevoe/Desktop/IMG_1678 (online-video-cutter.com).mp4"
-output_first_frame_path = "/Users/beckettdevoe/Desktop/first_frame_with_mask.jpg"
-output_fifth_frame_path = "/Users/beckettdevoe/Desktop/fifth_frame_with_mask.jpg"
-output_image_path = "/Users/beckettdevoe/Desktop/Larvae_Main_Stitched_Image.jpg"
+video_path = "/Path/to/video/for/stitching"
+output_first_frame_path = "/Output location 1"
+output_fifth_frame_path = "/Output location 2"
+output_image_path = "/Output location 3"
 
 cap = cv2.VideoCapture(video_path)
 ret, first_frame = cap.read()
