@@ -1,6 +1,7 @@
 # Project Overview
 
 This repository includes several Python scripts for image processing, video-to-image conversion, and YOLO-based object detection and testing.
+Note that in each of the files, you will need to declare correct paths to your datasets, input & output folders, and models.
 
 ---
 
