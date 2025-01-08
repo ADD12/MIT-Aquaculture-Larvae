@@ -32,7 +32,7 @@ The YOLO models counts and classifies shellfish larvae in a microscopic image, a
 
 2. Install dependencies:
     ```bash
-    pip install -r Spring-2024/requirements.txt
+    pip install -r Fall-2024/requirements.txt
     ```
 
 ---
@@ -41,8 +41,15 @@ The YOLO models counts and classifies shellfish larvae in a microscopic image, a
 1. **Data Labeling and Balancing**:
     - Future UROP students should label additional data, with a focus on training the model on images containing dead larvae, which are currently underrepresented in the dataset.
     - Efforts should be made to balance the dataset to improve classification performance on the minority class.
+  
+2. **Improving YOLO Implementation**:
+    - The current implementation is quite basic. The only modification to baseline YOLO is data augmentation. 
+    - You could explore hyperparameter tuning, regularization (weight regularization or dropout), or optimizing ancgor boxes.
+  
+3. **Explore Web Hosting**:
+    - The current implementation uses a localhost for the website, so you could explore hosting it on a web hosting service or on MIT's website.  
 
-2. **Detailed Record-Keeping**:
+4. **Detailed Record-Keeping**:
     - Keep detailed records of all iterations and changes to the model.
     - Ensure evaluation results are consistently recorded to build upon previous work.
     - Link to record of model iterations: https://docs.google.com/document/d/1nvsKUe01gV2PtSwyXfv_y1YS0jDedYZFQ-AhA69CAf0/edit?usp=sharing
